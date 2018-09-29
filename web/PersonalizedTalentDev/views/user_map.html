@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<!-- Scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/user_map_styles.css">
+	<!-- Custom Fonts -->
+	<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body ng-app="myApp" ng-controller="userCtrl">
+	<!-- Navigation -->
+	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+				</button>
+				<a class="navbar-brand" href="#page-top">Personalized Talent Dev</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="hidden">
+						<a href="#page-top"></a>
+					</li>
+					<li class="page-scroll">
+						<a href="/views/user_profile.html">Details</a>
+					</li>
+					<li class="page-scroll">
+						<a href="/views/user_profile.html">Edit Profile</a>
+					</li>
+
+
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<div class="center">
+		<img src="../img/user.png" ng-click="myFunction()" alt="Paris" style="width:100%">
+		<div class="container">
+			<p>{{text}}</p>
+		</div>
+	</div>
+	<modal visible="showModal">
+		<ul>
+			<li ng-repeat="(key,value) in myData">
+				{{ key }} :
+				<span ng-show="!isArray(value)">{{value}}</span>
+				<span ng-if="key=='Expertise'">
+				<ul ng-repeat="(x,y) in value">			
+					<li ng-repeat="(x1,y1) in value[$index]">
+					{{x1}}:{{y1}}	
+					</li>
+				</ul>
+				</span>
+				<span ng-if="key=='Courses'">
+				<ul ng-repeat="(x2,y2) in value">			
+					<li ng-repeat="(x2,y2) in value[$index]"><a ng-href="https://open.sap.com/courses" target="_blank" >{{x2}}
+					<img class="courseStatus" ng-show="y2=='C'" ng-src='../img/user_map/Complete.png' />
+					<img class="courseStatus" ng-show="y2=='P'" ng-src='../img/user_map/Cancel.png' />
+					</a>
+					
+					</li>
+				</ul>
+				</span>
+			</li>
+		</ul>
+	</modal>
+	<div class="responsive">
+		<img src="../img/user_map/NavigationGray.png" ng-show="isClicked1" style="width:100%">
+	</div>
+	<div class="responsive1">
+		<img src="../img/user_map/destination-icon.png" ng-click="showNav()" ng-show="isClicked" style="width:15%">
+		<div class="container1">
+			<p ng-show="isClicked">Development Expert</p>
+		</div>
+	</div>
+	<div class="target1pit1">
+		<img src="../img/user_map/Route1.png" ng-show="isClicked1" ng-click="myCourseCompletion()" style="width:7%">
+	</div>
+	<div class="target1pit2">
+		<img src="../img/user_map/Route.png" ng-show="isClicked1" ng-click="myCourseCompletion1()" style="width:8%">
+	</div>
+	<div class="target1pit3">
+		<img src="../img/user_map/Route1.png" ng-show="isClicked1" ng-click="myCourseCompletion2()" style="width:7%">
+	</div>
+
+	<div class="responsive2">
+		<img src="../img/user_map/Navigation1Gray.png" ng-show="isClicked2" style="width:100%">
+	</div>
+	<div class="target2pit1">
+		<img src="../img/user_map/Route1.png" ng-show="isClicked2" ng-click="myCourseCompletion3()" style="width:7%">
+	</div>
+	<div class="target2pit2">
+		<img src="../img/user_map/Route.png" ng-show="isClicked2" ng-click="myCourseCompletion4()" style="width:8%">
+	</div>
+	<div class="responsive3">
+		<img src="../img/user_map/destination-icon.png" ng-show="isClicked" ng-click="showNav1()" style="width:15%">
+		<div class="container1">
+			<p ng-show="isClicked">Chief Data Scientist</p>
+		</div>
+	</div>
+	<div class="responsive4">
+		<img src="../img/user_map/Navigation2Gray.png" ng-show="isClicked3" style="width:100%">
+	</div>
+	<div class="target3pit1">
+		<img src="../img/user_map/Route1.png" ng-show="isClicked3" ng-click="myCourseCompletion5()" style="width:7%">
+	</div>
+	<div class="responsive5">
+		<img src="../img/user_map/destination-icon.png" ng-show="isClicked" ng-click="showNav2()" style="width:15%">
+		<div class="container1">
+			<p ng-show="isClicked">Dev Ops Expert</p>
+		</div>
+	</div>
+	</div>
+
+	<script src="../js/user_map_ctrl.js"></script>
+
+</body>
+
+</html>

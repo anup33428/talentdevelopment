@@ -1,0 +1,248 @@
+.navbar-custom {
+	background: #2C3E50;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: none;
+}
+
+.navbar-custom a:focus {
+	outline: none;
+}
+
+.navbar-custom .navbar-brand {
+	color: white;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-brand:active,
+.navbar-custom .navbar-brand.active {
+	color: white;
+}
+
+.navbar-custom .navbar-nav {
+	letter-spacing: 1px;
+}
+
+.navbar-custom .navbar-nav li a {
+	color: white;
+}
+
+.navbar-custom .navbar-nav li a:hover {
+	color: #18BC9C;
+	outline: none;
+}
+
+.navbar-custom .navbar-nav li a:focus,
+.navbar-custom .navbar-nav li a:active {
+	color: white;
+}
+
+.navbar-custom .navbar-nav li.active a {
+	color: white;
+	background: #18BC9C;
+}
+
+.navbar-custom .navbar-nav li.active a:hover,
+.navbar-custom .navbar-nav li.active a:focus,
+.navbar-custom .navbar-nav li.active a:active {
+	color: white;
+	background: #18BC9C;
+}
+
+.navbar-custom .navbar-toggle {
+	color: white;
+	text-transform: uppercase;
+	font-size: 10px;
+	border-color: white;
+}
+
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+	background-color: #18BC9C;
+	color: white;
+	border-color: #18BC9C;
+}
+
+@media (min-width: 768px) {
+	.navbar-custom {
+		padding: 25px 0;
+		-webkit-transition: padding 0.3s;
+		-moz-transition: padding 0.3s;
+		transition: padding 0.3s;
+	}
+	.navbar-custom .navbar-brand {
+		font-size: 2em;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	.navbar-custom.affix {
+		padding: 10px 0;
+	}
+	.navbar-custom.affix .navbar-brand {
+		font-size: 1.5em;
+	}
+}
+
+div.polaroid {
+	width: 250px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+}
+
+.container {
+	position: relative;
+	/*    text-align: center; */
+	/* text-overflow: ellipsis; */
+	font-family: monospace;
+	color: whitesmoke;
+}
+
+.container1 {
+	position: relative;
+	text-align: left;
+	/* text-overflow: ellipsis; */
+	font-family: monospace;
+	color: whitesmoke;
+}
+
+.container2 {
+	position: relative;
+	text-align: center;
+	/* text-overflow: ellipsis; */
+	font-family: cursive;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10%;
+	transform: translate(-50%, -50%);
+	font-size: 14px;
+	/*	border-radius: 15px 50px;*/
+	border-radius: 75px;
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+.responsive {
+	position: absolute;
+	/* padding: 0 6px 0 10px; */
+	opacity: 1;
+	float: right;
+	width: 26.99999%;
+	top: 50%;
+	transform: translate(206%, -43%);
+	/* margin-top: 0%; */
+	/* padding-left: 16%; */
+	/* margin-left: -23%; */
+	padding-left: -4px;
+}
+
+.responsive1 {
+	position: absolute;
+	/* padding: 0 6px 0 10px; */
+	float: right;
+	width: 29.99999%;
+	top: 50%;
+	transform: translate(272%, -93%);
+	/* margin-top: 0%; */
+	/* padding-left: 16%; */
+	/* margin-left: -23%; */
+	padding-left: -4px;
+}
+
+.responsive2 {
+	position: absolute;
+	width: 15.99999%;
+	opacity: 1;
+	top: 52%;
+	transform: translate(180%, -96%);
+}
+
+.responsive3 {
+	position: absolute;
+	width: 29.99999%;
+	top: 82%;
+	transform: translate(82%, -512%);
+}
+
+.responsive4 {
+	position: absolute;
+	width: 11.99999%;
+	top: 89%;
+	opacity: 1;
+	transform: translate(299%, -116%);
+}
+
+.responsive5 {
+	position: absolute;
+	width: 29.99999%;
+	top: 143%;
+	transform: translate(104%, -512%);
+}
+
+.target1pit1 {
+	position: absolute;
+	width: 29.99999%;
+	top: 62%;
+	transform: translate(189%, -504%);
+}
+
+.target1pit2 {
+	position: absolute;
+	width: 29.99999%;
+	top: 79%;
+	transform: translate(205%, -512%)
+}
+
+.target2pit1 {
+	position: absolute;
+	width: 29.99999%;
+	top: 56%;
+	transform: translate(95%, -512%);
+}
+
+.target2pit2 {
+	position: absolute;
+	width: 29.99999%;
+	top: 68%;
+	transform: translate(130%, -434%);
+}
+
+.target3pit1 {
+	position: absolute;
+	width: 29.99999%;
+	top: 90%;
+	transform: translate(118%, -512%)
+}
+
+.target1pit3 {
+	position: absolute;
+	width: 29.99999%;
+	top: 67%;
+	transform: translate(241%, -517%)
+}
+
+.courseStatus
+{
+   
+    /* border-radius: 10%; */
+    size: 3px;
+    width: 16px ;
+}
+
+img {
+	/*display: block;*/
+	margin: auto;
+	opacity: 1;
+	border-radius: 10%;
+}
+
+body {
+	background-color: #485e74;
+}
+
+</style>

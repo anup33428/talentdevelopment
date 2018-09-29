@@ -1,0 +1,19 @@
+<form action="" style="background: #485e80;border-radius: 25px;box-shadow: 0px 0px 5px white;">
+	<div class="imgcontainer">
+		<img src="img/userAdd.png" alt="Avatar" width="40%">
+	</div>
+	<div class="container">
+		<input type="text" placeholder="Enter Firstname" name="fname" required style="border-radius: 10px">
+		<input type="text" placeholder="Enter Lastname" name="fname" required style="border-radius: 10px">
+		<input type="email" placeholder="Enter e-Mail" name="email" required style="border-radius: 10px">
+		<input type="password" placeholder="Enter Password" name="psw" required style="border-radius: 10px">
+		<input type="number" placeholder="Enter Mobile Number" name="mnum" required style="border-radius: 10px">
+		<span style="color:white;font-family:'Lato'"><h4>Connect Accounts:</h4> </span>
+		<div ng-repeat="repository in repositories">
+			<input type="text" placeholder="Enter {{repository}} url" style="border-radius: 10px" />
+		</div>
+
+		<button type="" ng-click="gotoUrl('/login')" style="border-radius: 10px">Register</button>
+		<button ng-click="gotoUrl('/login')" class="btn" style="border-radius: 10px">Cancel</button>
+	</div>
+</form>
